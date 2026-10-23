@@ -20,6 +20,6 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         with:
-          args: --severity-threshold=high --file=frontend/package.json
+          args: --file=frontend/package.json # --severity-threshold=high (will fail on high vulneravilities)
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
