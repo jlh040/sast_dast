@@ -16,7 +16,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
       - name: Install dependencies
-        run: npm install
+        run: npm install --prefix frontend
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         with:
